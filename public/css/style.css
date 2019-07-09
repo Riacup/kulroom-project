@@ -1,0 +1,16 @@
+.a{
+    border: 8px solid white;
+    box-shadow: 2px 2px 5px rgb(176, 178, 180);
+    border-radius: 4px;
+    border-bottom-width: 20px;
+}
+.b{
+    border: 8px solid white;
+    box-shadow: 2px 2px 5px rgb(176, 178, 180);
+    border-radius: 4px;
+    border-bottom-width: 20px;
+    margin-left: 20px;
+}
+.card{
+    margin: 20px;
+}
