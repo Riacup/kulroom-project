@@ -83,9 +83,6 @@
     <section class="catatan">
             <div id="container">
                 <div class="row" style="padding: 3% 0 3% 0">
-                    <a href="\catatan-add">
-                        <button type="submit" class="btn btn-primary btn-sm">Add Catatan</button>
-                    </a>
                     <div class="col-md-2 offset-md-2 a">							
                         <div class="topic">
                             <br>
@@ -121,6 +118,10 @@
                                     </div>
                                 </div>
                             @endforeach
+                            <br>
+                            <a href="\catatan-add">
+                                <button type="submit" class="btn btn-primary btn-sm">Add Catatan</button>
+                            </a>
                         </div>
                 </div>
             </div>

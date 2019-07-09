@@ -10,9 +10,30 @@ class UploadController extends Controller
 {
     public function upload()
     {
-        $photo = Photo::get();
-        return view('upload', [ 'photo'=>$photo ]);
+        $photos = Photo::get();
+        return view('upload', [ 'photo'=>$photos ]);
     }
 
-    
+    public function proses_upload(Request $request)
+    {
+        $this->validate($request, [
+            'file' => 'required|image|mimes:jpeg,jpg,png|max:2048',
+        ]);
+
+        // menyimpan data file yang diupload ke variable $file
+        $file = $request->file('file');
+
+        $nama_file = time()."_".$file->getClientOriginalName();
+
+        // diisi dengan nama folder tempat kemana file akan diupload
+        $tujuan_upload = 'data_file';
+        $file->move($tujuan_upload, $nama_file);
+
+        Photo::create([
+            'file' => $nama_file,
+        ]);
+
+        return redirect()->back();
+    }
+
 }

@@ -21,8 +21,7 @@ class SubjectController extends Controller
     public function index()
     {
         $subject = Subject::
-        has('notes')
-        ->get();
+        has('notes')->get();
 
         $subjectAll = Subject::all();
 
